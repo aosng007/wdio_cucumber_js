@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "cucumber-quick": {
+		"tool": "webdriverio",
+		"script": "npx wdio wdio.conf.js"
+	}
+}
