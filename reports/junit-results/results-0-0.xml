@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Validate_Table" timestamp="2020-08-25T15:17:00" time="6.454" tests="1" failures="0" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="featureName" value="Validate Table"/>
+      <property name="capabilities" value="chrome.84_0_4147_135.macosx"/>
+      <property name="featureFile" value="./test/features/Login/Login.feature"/>
+    </properties>
+    <testcase classname="CucumberJUnitReport-chrome.84_0_4147_135.macosx.Validate_Table" name="Validate_Table.Login" time="6.435">
+      <system-out>
+        <![CDATA[
+✅ Given I am on Home page✅ Then I see 'Login' title
+]]>
+      </system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

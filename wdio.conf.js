@@ -136,6 +136,19 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['spec',
+        ['junit', {
+            outputDir: './reports/junit-results',
+            outputFileFormat: function (options) { // optional
+                //return `results-${options.cid}.${options.capabilities}.xml`
+                return `results-${options.cid}.xml`
+            }
+        }],
+        ['allure', {
+            outputDir: './reports/allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
+            useCucumberStepReporter: true
+        }],
         ['cucumberjs-json', {
             jsonFolder: './reports/json',
             language: 'en',
