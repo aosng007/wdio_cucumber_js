@@ -21,9 +21,9 @@ steps:
     npm run test:server
   displayName: 'npm install and test'
 
-  - script: |
-    npm run test:server
-  displayName: 'test with variables'
+  # - script: |
+  #   npm run test:server
+  # displayName: 'test with variables'
 
 # - script: | 
 #     npx wdio wdio.conf.js --suite '$(testSuite)' --baseUrl '$(baseUrl)'
