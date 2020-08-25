@@ -17,15 +17,13 @@ steps:
 
 - script: |
     npm install
-    npm run test
-    npm run test:server
-  displayName: 'npm install and test'
+  displayName: 'npm install'
 
-  - script: |
-    npm run test:server
-  displayName: 'test with variables'
+  # - script: |
+  #   npm run test:server
+  # displayName: 'test with variables'
 
-# - script: | 
-#     npx wdio wdio.conf.js --suite '$(testSuite)' --baseUrl '$(baseUrl)'
-#   displayName: 'test'
-#   continueOnError: true
+- script: | 
+    npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl '$(baseUrl)'
+  displayName: 'test'
+  continueOnError: true
