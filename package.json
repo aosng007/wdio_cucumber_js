@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl 'https://cp-uat.service.nhvr.gov.au'"
+    "test": "npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl 'https://cp-uat.service.nhvr.gov.au'",
+    "test:server": "npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl '$(baseUrl)'"
   },
   "repository": {
     "type": "git",
