@@ -30,6 +30,6 @@ steps:
   - task: PublishTestResults@2
     inputs:
       testResultsFormat: "JUnit"
-      testResultsFiles: "$(Build.SourcesDirectory)/reports/junit-results/*.xml"
-      mergeTestResults: true
-      failTaskOnFailedTests: false
+      testResultsFiles: "**/TEST-*.xml"
+      # mergeTestResults: true
+      # failTaskOnFailedTests: false
