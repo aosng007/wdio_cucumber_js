@@ -27,3 +27,10 @@ steps:
     npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl '$(baseUrl)'
   displayName: 'test'
   continueOnError: true
+
+-task: PublishTestResults @2
+inputs:
+  testResultsFormat: 'JUnit'
+  testResultsFiles: '$(Build.SourcesDirectory)/reports/junit-results/*.xml'
+  mergeTestResults: true
+  failTaskOnFailedTests: false
