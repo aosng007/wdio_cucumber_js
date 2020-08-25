@@ -17,16 +17,8 @@ steps:
 
   - script: |
       npm install
-    displayName: "npm install"
-
-
-    # - script: |
-    #   npm run test:server
-    # displayName: 'test with variables'
-  - script: |
-      npx wdio wdio.conf.js --cucumberOpts.name='Login' --baseUrl '$(baseUrl)'
-    displayName: 'test'
-    continueOnError: true
+      npm test
+    displayName: "npm install and test"
 
   - task: PublishTestResults@2
     inputs:
